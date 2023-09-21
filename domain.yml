@@ -1,0 +1,140 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - ask_ability
+  - thankyou
+  - praise
+  - decry
+  - ask_for_help
+  - ask_top_rate_address
+  - ask_food_name_with_address
+  - ask_food_name_with_price
+  - ask_food_name_with_price_address
+  - ask_food_time
+
+responses:
+  utter_greet:
+    - text: "Em chào anh(chị) ạ. \nEm là chatbot được thiết kế để giúp anh chị quyết thắc mắc ăn uống ạ :3"
+  utter_goodbye:
+    - text: Hẹn gặp lại anh chị ạ ^^
+  utter_happy:
+    - text: Hì hì, anh chị khen quá lơì rồi ạ :D
+  utter_sorry:
+    - text: Em xin lôĩ vì em chưa đủ thông minh ạ =(((
+  utter_noworries:
+    - text: Em được nuôi để làm việc này ạ :)))
+  utter_show_ability:
+    - text: Em có thể trò chuyện với anh(chị), thi thoảng có thể đề xuất anh(chị) nên ăn gì ở đâu ạ
+  utter_fallback:
+    - text: Em xin lỗi, em chưa hiểu ý muốn của anh(chị) ạ. Anh chị có thể nói rõ ý hơn không ạ :(
+
+actions:
+  - utter_greet
+  - utter_happy
+  - utter_goodbye
+  - utter_sorry
+  - utter_noworries
+  - utter_show_ability
+  - utter_fallback
+  - action_top_rate_address
+  - action_food_name_with_address
+  - action_food_name_with_price
+  - action_food_name_with_price_address
+  - action_food_time
+
+entities:
+  - number_top_res
+  - address_res
+  - food_name
+  - address_food
+  - price_type
+  - price
+  - start_price
+  - end_price
+  - start_time
+  - end_time
+  - time_type
+
+slots:
+  number_top_res:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: number_top_res
+
+  address_res:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: address_res
+
+  food_name:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: food_name
+  
+  address_food:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: address_food
+
+  price_type:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: price_type
+
+  price:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: price
+  
+  start_price:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: start_price
+  
+  end_price:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: end_price
+
+  start_time:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: start_time
+
+  end_time:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: end_time
+
+  time_type:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: time_type
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

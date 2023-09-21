@@ -1,0 +1,3 @@
+2023-08-17 04:38:37,601 [DEBUG]  Sanic-CORS: Configuring CORS with resources: {'/*': {'origins': [''], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': 'filename', 'supports_credentials': True, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/*': {'origins': ''}}, 'intercept_exceptions': True, 'always_send': True}}
+2023-08-17 04:38:37,619 [DEBUG]  Starting new HTTPS connection (1): o251570.ingest.sentry.io:443
+2023-08-17 04:38:37,803 [DEBUG]  https://o251570.ingest.sentry.io:443 "POST /api/2801673/envelope/ HTTP/1.1" 200 2

@@ -1,0 +1,329 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - chào em
+      - hello em
+      - hi em
+      - em ơi, cho anh hỏi
+      - bot ơi
+      - cho mình hỏi chút
+
+  - intent: goodbye
+    examples: |
+      - tạm biệt em
+      - tạm biệt bot nhá
+      - bye bye
+      - good bye
+
+  - intent: ask_ability
+    examples: |
+      - em có thể làm những gì nhỉ
+      - em có chức năng gì?
+      - em giúp gì được anh không?
+      - em có thể giúp gì cho anh?
+      - em biết làm gì?
+      - em hỗ trợ anh như thế nào?
+      - cho anh xem các chức năng của em
+
+  - intent: thankyou
+    examples: |
+      - cảm ơn em nhá
+      - thanks em nha
+      - cảm ơn nha
+      - good job
+      - thank you
+      - cảm ơn bot nha
+      - thanks bot
+      - cảm ơn
+      - thank you so much
+      - great! Thanks
+
+  - intent: praise
+    examples: |
+      - bot giỏi quá
+      - great
+      - awsome
+      - bot làm tốt lắm
+      - ui giỏi thế
+      - bot thông minh
+      - đẹp trai đấy
+      - Em đẹp trai quá
+
+  - intent: decry
+    examples: |
+      - quá tệ
+      - ngu ngốc
+      - chả biết gì cả
+      - ngu thật
+      - dở ghê
+      - có thế mà cũng không biết
+      - kém cói
+
+  - intent: ask_for_help
+    examples: |
+      - trưa nay anh nên ăn gì nhỉ
+      - trưa nay ăn gì bây giờ nhỉ
+      - chọn giúp t bữa trưa phát
+      - ăn trưa nào
+      - tiểu nhị, chọn món
+      - bữa trưa
+      - ăn gì bây giờ
+      - chọn giúp anh một quán ăn
+
+  - intent: ask_top_rate_address
+    examples: |
+      - Hãy cho tôi biết danh sách top [5](number_top_res) nhà hàng đánh giá cao nhất ở [Bách Khoa](address_food).
+      - Top [7](number_top_res) quán ăn đánh giá cao nhất ở [Hoàng Mai](address_food)?
+      - Có thể gợi ý cho tôi [1](number_top_res) nhà hàng đánh giá cao nhất ở [Thanh Oai](address_food) không?
+      - Tìm cho tôi top [10](number_top_res) nhà hàng được đánh giá cao nhất tại [Long Biên](address_food).
+      - Tôi cần tìm [2](number_top_res) nhà hàng có đánh giá cao nhất ở khu vực [Lam Từ Liêm](address_food).
+      - Bạn có thể cho tôi biết top [3](number_top_res) nhà hàng phổ biến nhất ở [Gia Lâm](address_food) không?
+      - Tìm kiếm [bánh mì](food_name) có xếp hạng cao nhất ở [Đông Anh](address_food).
+      - Bạn có thể chỉ cho tôi những nhà hàng top đầu ở [Chương Mỹ](address_food) không?
+      - [4](number_top_res) nhà hàng có đánh giá cao nhất ở khu vực [Phúc Thọ](address_food) là gì?
+      - Cho tôi xem danh sách [11](number_top_res) nhà hàng được đánh giá tốt nhất ở [Thanh Oai](address_food).
+      - Quán [bún riêu](food_name) ăn ngon nhất ở [Hoài Đức](address_food) là gì?
+      - Nhà hàng ngon nhất ở [Mê Linh](address_food) 
+
+  - intent: ask_food_name_with_address
+    examples: |
+      - tìm quán ăn [bún chả](food_name) ở [Hai Bà Trưng](address_food).
+      - tìm quán ăn [bún đậu](food_name).
+      - anh muốn ăn [bánh mì](food_name) ở đâu?
+      - có quán ăn nào bán [chocolate](food_name) không?
+      - gợi ý quán ăn [cơm tấm](food_name).
+      - có quán nào bán [trà sữa](food_name) không?
+      - tìm quán ăn [bún đậu mắm tôm](food_name) ở [Ba Đình](address_food).
+      - ở [Hoàng Mai](address_food) có quán ăn [cơm rang](food_name) không?
+      - tìm quán ăn [phở](food_name) ở [Quốc Oai](address_food).
+      - gợi ý những quán ăn [bún chả](food_name) ở [Đống Đa](address_food).
+      - Bạn có thể cho tôi danh sách các quán ăn [bún đậu mắm tôm](food_name) ở [Thanh Xuân](address_food)?
+      - Tôi muốn tìm quán ăn [bánh mỳ](food_name) ở [Cầu Giấy](address_food).
+      - Tìm cho tôi quán ăn [trà sữa](food_name) ở [Hà Đông](address_food).
+      - Gợi ý các quán ăn [bún đậu](food_name) ở [Hai Bà Trưng](address_food).
+      - Bạn có thể tìm quán ăn [phở](food_name) ở [Hoàn Kiếm](address_food) không?
+      - Ở [Long Biên](address_food) có quán ăn [hủ tiếu](food_name) không?
+      - Tại [Nam Từ Liêm](address_food) có quán ăn [gà nướng](food_name) không?
+
+  - intent: ask_food_name_with_price  
+    examples: |
+      - món ăn nào [khoảng](price_type) [50k](start_price) không?
+      - có [cháo lòng](food_name) giá [100k](start_price) không?
+      - có món ăn nào [dưới](price_type) [200k](start_price) không ở [Sơn Tây](address_food)?
+      - có món ăn nào tầm [300k](start_price) (đến)[price_type] [400k](end_price) không?
+      - món ăn nào giá [500k](start_price) [đến](price_type) [600k](end_price)?
+      - tôi cần tìm món ăn giá [700k](start_price) [đến](price_type) [800k](end_price).
+      - có món ăn nào [khoảng](price_type) [5000](start_price) không?
+      - món ăn nào giá [10000](start_price) không?
+      - có [bún riêu](food_name) [dưới](price_type) [200000](start_price) không?
+      - có món ăn nào [tầm](price_type) [30000](start_price) đến [400000](end_price) không?
+      - ở [Mỹ Đức](address_food) món ăn nào giá [50000](start_price) [đến](price_type) [60000](end_price)?
+      - tôi cần tìm món ăn giá [700000](start_price) [đến](price_type) [800000](end_price).
+      - [nem nướng](food_name) [dưới](price_type) [5000](start_price) ở [Phúc Thọ](address_food) có không?
+      - có [cơm](food_name) [tầm](price_type) [30000](start_price) đến [400000](end_price) ở [Quốc Oai](address_food) không?
+      - có [bánh đa](food_name) giá từ [5k](start_price) đến [10k](end_price) không?
+      - tôi cầm tìm [bia hơi](food_name) giá [10000](start_price) [đến](price_type) [20000](end_price) ở [Sóc Sơn](address_food).
+
+  - intent: ask_food_name_with_price_address
+    examples: |
+      - Cho tôi biết món ăn [chay](food_name) giá [50k](start_price) ở [Bách Khoa](address_food).
+      - Bạn có [bánh gà](food_name) giá [100k](start_price) ở [Hai Bà Trưng](address_food) không?
+      - Có món ăn nào [dưới](price_type) [200k](start_price) ở [Sơn Tây](address_food) không?
+      - Có món ăn nào tầm [300k](start_price) đến [400k](end_price) ở [Quốc Oai](address_food) không?
+      - Món ăn nào giá [500k](start_price) đến [600k](end_price) ở [Long Biên](address_food)?
+      - Tôi cần tìm [Gà Rán KFC](food_name) giá [700k](start_price) [đến](price_type) [800k](end_price) ở [Gia Lâm](address_food).
+      - Có món ăn nào giá [trên](price_type) [5000](start_price) ở [Thạch Thất](address_food) không?
+      - Món ăn nào giá [10000](start_price) ở [Nam Từ Liêm](address_food) không?
+      - Có [xôi](food_name) dưới [200000](start_price) ở [Tây Hồ](address_food) không?
+      - Có món ăn nào [tầm](price_type) [30000](start_price) đến [400000](end_price) ở [Cầu Giấy](address_food) không?
+      - tìm món có giá [nhỏ hơn](price_type) [5000](start_price) ở [Hoàng Mai](address_food).
+      - có món nào [lớn hơn](price_type) [30000](start_price) ở [Hai Bà Trưng](address_food) không?
+      - có quán [ăn vặt](food_name) giá từ [5k](start_price) đến [10k](end_price) không nhỉ?
+      
+
+  - intent: ask_food_time
+    examples: |
+      - Từ [10h](start_time) [đến](price_type) [11h](end_time) có quán ăn nào không?
+      - Có quán ăn nào [đang bán](time_type) [12h](start_time) không?
+      - Có quán ăn nào [mở cửa](time_type) [13h30](start_time) không?
+      - Từ [14 giờ](start_time) [đến](price_type) [15 giờ](end_time) có quán ăn nào không?
+      - Có quán ăn [cơm tấm](food_name) nào [mở cửa](time_type) [16h](start_time) không?
+      - Có quán ăn [vịt quay](food_name) nào [bây giờ](time_type) giờ không?
+      - [Bây giờ](time_type) có quán ăn [kem xôi](food_name) không?
+      - Có quán ăn nào [mở cửa](time_type) [17h](start_time) không?
+      - Từ [19 giờ](start_time) đến [20 giờ 20 phút](end_time) có quán ăn nào không?
+      - Có quán ăn [tào phớ](food_name) nào [mở cửa](time_type) [21h](start_time) không?
+      - Có quán ăn [bây giờ](time_type) giờ không?
+      - [Bây giờ](time_type) có quán ăn [kem xôi](food_name) không?
+      - Có quán ăn nào [trước](time_type) [22h30](start_time) không?
+      - Có quán ăn nào [sau](time_type) [23h](start_time) không?
+      - ở [Hai Bà Trưng](address_food) có quán ăn [bây giờ](time_type) giờ không?
+      - tại [Hoàng Mai](address_food) có quán ăn [mở cửa](time_type) [12h](start_time) không?
+      - [hiện tại](time_type) có quán ăn [bánh mì](food_name) không?
+      - Có quán ăn [bây giờ](time_type) giờ không?
+      - [Bây giờ](time_type) có quán ăn [cơm sườn](food_name) không?
+
+  - regex: start_time
+    examples: |
+      - \b\d+(\s*(giờ|g|h)\s*(\d+)?('\s*phút)?|\d+(\s*:\s*\d+)?(h(\d+('\s*phút)?)?)?)\b
+      - \b\d+(h|giờ|g)\b
+      - \b(0?[0-9]|1[0-9]|2[0-4])\s*(h|giờ)\b
+
+  - regex: end_time
+    examples: |
+      - \b\d+(\s*(giờ|g|h)\s*(\d+)?('\s*phút)?|\d+(\s*:\s*\d+)?(h(\d+('\s*phút)?)?)?)\b
+      - \b\d+(h|giờ|g)\b
+      - \b(0?[0-9]|1[0-9]|2[0-4])\s*(h|giờ)\b
+
+  - regex: start_price
+    examples: |
+      - \b\d+(\s*(k|K)?)\b
+
+  - regex: end_price
+    examples: |
+      - \b\d+(\s*(k|K)?)\b
+
+  - regex: price
+    examples: |
+      - \b\d+(\s*k|K)?\b
+
+  - regex: number_top_res
+    examples: |
+      - (?<!\d)\d{1,2}(?!\d)
+
+  - regex: time_type
+    examples: |
+      - mở cửa
+      - đang bán
+      - bây giờ
+      - mở
+      - đang mở
+      - lúc này
+      - hiện tại
+      - giờ này
+      - giờ đây
+      - hiện giờ
+      - sau
+      - trước
+      - trở lại
+      - trở về
+      - trở đi
+      - trở ra
+      - trở lên
+      - trở xuống
+      - bây giờ
+      - lúc này
+      - đang
+      
+
+  - lookup: district
+    examples: |  
+      - Ba Đình
+      - Bắc Từ Liêm
+      - Cầu Giấy
+      - Đống Đa
+      - Hà Đông
+      - Hai Bà Trưng
+      - Hoàn Kiếm
+      - Hoàng Mai
+      - Long Biên
+      - Nam Từ Liêm
+      - Tây Hồ
+      - Thanh Xuân
+      - Sơn Tây
+      - Ba Vì
+      - Chương Mỹ
+      - Đan Phượng
+      - Đông Anh
+      - Gia Lâm
+      - Hoài Đức
+      - Mê Linh
+      - Mỹ Đức
+      - Phú Xuyên
+      - Phúc Thọ
+      - Quốc Oai
+      - Sóc Sơn
+      - Thạch Thất
+      - Thanh Oai
+      - Thanh Trì
+      - Thường Tín
+      - Ứng Hòa
+
+  - lookup: food
+    examples: |
+      - bún chả
+      - bún đậu
+      - bánh mì
+      - chocolate
+      - cơm tấm
+      - trà sữa
+      - bún đậu mắm tôm
+      - cơm rang
+      - phở
+      - hủ tiếu
+      - gà nướng
+      - bò né
+      - sushi
+      - hủ tiếu nam vang
+      - nem nướng
+      - bánh cuốn
+      - bún riêu
+      - mì quảng
+      - bún bò Huế
+      - cơm bình dân
+      - ốc hương
+      - kem
+      - nước mía
+      - bánh tráng trộn
+      - cháo
+      - gà xào xả ớt
+      - thịt kho tàu
+      - nem cuốn
+      - chả cá lã vọng
+      - mì xào hải sản
+      - lẩu thái
+      - hến xúc bánh đa
+      - phở cuốn
+      - bún chả cá
+      - bò kho
+      - bún thịt nướng
+      - hủ tiếu gõ
+      - cơm gà
+      - bánh canh
+      - cơm hấp lá sen
+      - gỏi cuốn
+      - bò lúc lắc
+      - bánh bao
+      - canh chua
+      - xôi xéo
+      - mì tôm
+      - cháo lòng
+      - hột vịt lộn
+      - nem chua rán
+
+  - lookup: modifier
+    examples: |
+      - dưới
+      - tầm
+      - trên
+      - khoảng
+      - khoảng từ
+      - từ
+      - đến
+      - nhiều hơn
+      - ít hơn
+      - lớn hơn
+      - nhỏ hơn
+      - cao hơn
+      - thấp hơn
+      - nhiều h
+      - ít h
+      - lớn h
+      - nhỏ h
+      - cao h
+      - thấp h
+      - kém hơn
+      - kém h
+

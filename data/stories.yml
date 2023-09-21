@@ -1,0 +1,63 @@
+version: "3.1"
+
+stories:
+
+- story: greet path
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+- story: goodbye path
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: thankyou path
+  steps:
+    - intent: thankyou
+    - action: utter_noworries
+
+- story: ask_ability path
+  steps:
+    - intent: ask_ability
+    - action: utter_show_ability
+
+- story: praise path
+  steps:
+    - intent: praise
+    - action: utter_happy
+
+- story: decry path
+  steps:
+    - intent: decry
+    - action: utter_sorry
+
+- story: ask_for_help path
+  steps:
+    - intent: ask_for_help
+    - action: utter_show_ability
+
+- story: ask_top_rate_address path
+  steps:
+    - intent: ask_top_rate_address
+    - action: action_top_rate_address
+
+- story: ask_food_name_with_address path
+  steps:
+    - intent: ask_food_name_with_address
+    - action: action_food_name_with_address
+
+- story: ask_food_name_with_price path
+  steps:
+    - intent: ask_food_name_with_price
+    - action: action_food_name_with_price
+
+- story: ask_food_name_with_price_address path
+  steps:
+    - intent: ask_food_name_with_price_address
+    - action: action_food_name_with_price_address
+
+- story: ask_food_time path
+  steps:
+    - intent: ask_food_time
+    - action: action_food_time
